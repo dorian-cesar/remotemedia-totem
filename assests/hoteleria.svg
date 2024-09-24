@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="357" height="231" viewBox="0 0 357 231">
+  <defs>
+    <filter id="Rectangle_493" x="0" y="0" width="357" height="231" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-color="#4a4747" flood-opacity="0.553"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_493-2" x="0" y="0" width="357" height="231" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#fff" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_3" data-name="Grupo 3" transform="translate(-579.5 -541.5)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 579.5, 541.5)" filter="url(#Rectangle_493)">
+        <rect id="Rectangle_493-3" data-name="Rectangle 493" width="336" height="210" rx="40" transform="translate(10.5 3.5)" fill="#053bb5"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 579.5, 541.5)" filter="url(#Rectangle_493-2)">
+        <rect id="Rectangle_493-4" data-name="Rectangle 493" width="336" height="210" rx="40" transform="translate(10.5 3.5)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="General" transform="translate(669 675)" fill="#e4e4e4" font-size="31" font-family="Arial" font-weight="700"><tspan x="0" y="0">HOTELERÍA</tspan></text>
+    <path id="Icon_awesome-hotel" data-name="Icon awesome-hotel" d="M34.014,3.887a.972.972,0,0,0,.972-.972V.972A.972.972,0,0,0,34.014,0H.972A.972.972,0,0,0,0,.972V2.915a.972.972,0,0,0,.972.972h.971V27.211H.972A.972.972,0,0,0,0,28.183v1.944a.972.972,0,0,0,.972.972H15.549V26.239a.975.975,0,0,1,.972-.972h1.944a.975.975,0,0,1,.972.972V31.1H34.014a.972.972,0,0,0,.972-.972V28.183a.972.972,0,0,0-.972-.972h-.972V3.887ZM15.549,6.608a.836.836,0,0,1,.777-.777h2.332a.836.836,0,0,1,.777.777V8.941a.836.836,0,0,1-.777.777H16.326a.836.836,0,0,1-.777-.777V6.608Zm0,5.831a.836.836,0,0,1,.777-.777h2.332a.836.836,0,0,1,.777.777v2.332a.836.836,0,0,1-.777.777H16.326a.836.836,0,0,1-.777-.777V12.439ZM7.775,6.608a.836.836,0,0,1,.777-.777h2.332a.836.836,0,0,1,.777.777V8.941a.836.836,0,0,1-.777.777H8.552a.836.836,0,0,1-.777-.777Zm3.11,8.941H8.552a.836.836,0,0,1-.777-.777V12.439a.836.836,0,0,1,.777-.777h2.332a.836.836,0,0,1,.777.777v2.332A.836.836,0,0,1,10.884,15.549Zm.777,7.775a5.831,5.831,0,0,1,11.662,0Zm15.549-8.552a.836.836,0,0,1-.777.777H24.1a.836.836,0,0,1-.777-.777V12.439a.836.836,0,0,1,.777-.777h2.332a.836.836,0,0,1,.777.777Zm0-5.831a.836.836,0,0,1-.777.777H24.1a.836.836,0,0,1-.777-.777V6.608a.836.836,0,0,1,.777-.777h2.332a.836.836,0,0,1,.777.777Z" transform="translate(741 594)" fill="#e4e4e4"/>
+  </g>
+</svg>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totem-RemoteMedia</title>
+    <style>
+        .cuerpo {
+            height: 1720px;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            text-align: center;
+            background: transparent linear-gradient(180deg, #F5F5F5 0%, #D8D8D8 100%) 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+        .header {
+            height: 200px;
+          
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('./assests/HEADER@2x.png');
+        }
+
+        /* Contenedor de los botones principales */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            position: absolute;
+            top: 500px;
+            left: 0;
+            right: 0;
+        }
+
+        .button-container2 {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            position: absolute;
+            top: 800px;
+            left: 0;
+            right: 0;
+        }
+
+        /* Imagen btn_llamar centrada y a 800px del margen superior */
+        #btn_llamar {
+            position: absolute;
+            top: 800px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Botón Contactanos centrado y a 1500px del margen superior */
+        #btn_contactanos {
+            background-color: #5ECC67;
+
+            width: 826px;
+            height: 143px;
+            border-radius: 70px;
+            color: white;
+            font-size: 36px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 1400px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset 3px 3px 6px #FFFFFF, 0px 7px 7px #363434AC;
+            border: 1px solid #707070;
+        }
+
+        #wit {
+            position: absolute;
+            top: 1600px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #descuento {
+
+            position: absolute;
+            top: 1100px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        #carteleria {
+            margin-top: 0%;
+            position: absolute;
+            top: 300px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 74px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            width: 80%;
+            /*font: normal normal bold 60px/74px Helvetica Neue;*/
+            font-size: 60px;
+            letter-spacing: 0px;
+            color: #073366;
+            text-transform: capitalize;
+            opacity: 1;
+
+        }
+
+        #btn_volver {
+            position: absolute;
+            top: 55px;
+            left: 933px;
+            width: 104px;
+            height: 104px;
+            /* UI Properties */
+            /* background: transparent url('./assests/back_button.png') 0% 0% no-repeat padding-box; */
+            opacity: 1;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="assests/back_button@2x.png" id="btn_volver" alt="">
+    </div>
+    <div class="cuerpo">
+        <p id="carteleria">
+            <b>Innovación Y Tecnología En Cartelería Digital</b>
+        </p>
+
+        <div class="button-container">
+
+            <img src="assests/Gastro.svg" alt="" width="350px" id="btn_gastro">
+            <img src="assests/hoteleria.svg" alt="" width="350px" id="btn_hoteleria">
+
+        </div>
+
+        <div class="button-container2">
+
+            <img src="assests/RETAIL.svg" alt="" width="350px" id="retail">
+            <img src="assests/CORPORATIVO.svg" alt="" width="350px" id="btn_corporativo">
+
+        </div>
+
+
+        <img src="assests/descuento.svg" alt="" id="descuento">
+
+
+        <!-- Botón Contactanos centrado a 1500px del margen superior -->
+        <button id="btn_contactanos"><b>Contáctanos</b></button>
+
+        <img src="./assests/wit.png" alt="" id="wit">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Acción de jQuery para volver a la página anterior
+        $('#btn_volver').click(function () {
+            window.history.back(); // Volver a la página anterior
+        });
+
+        
+        $("#btn_gastro").click(function () {
+            window.location.href = "gastronomia.html"; // Reemplaza con la URL deseada
+        });
+
+        $("#btn_hoteleria").click(function () {
+            window.location.href = "hoteleria.html"; // Reemplaza con la URL deseada
+        });
+        $("#retail").click(function () {
+            window.location.href = "retail.html"; // Reemplaza con la URL deseada
+        });
+        $("#btn_corporativo").click(function () {
+            window.location.href = "corporativo.html"; // Reemplaza con la URL deseada
+        });
+
+        $("#descuento").click(function () {
+            window.location.href = "descuento.html"; // Reemplaza con la URL deseada
+        });
+
+        $("#btn_contactanos").click(function () {
+            window.location.href = "contacto.html"; // Reemplaza con la URL deseada
+        });
+    
+    
+    
+
+
+    </script>
+
+</body>
+
+</html>

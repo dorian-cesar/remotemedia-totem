@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totem-RemoteMedia</title>
+  <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet">
+  <script src="https://vjs.zencdn.net/7.19.2/video.js"></script>
+  <style>
+    .cuerpo {
+      height: 100vh; /* Altura al 100% de la ventana */
+      position: relative;
+    }
+
+    .video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Asegura que el video cubra todo el div */
+      object-fit: cover; /* Mantiene la proporción del video cubriendo el contenedor */
+      z-index: -1; /* Coloca el video detrás del contenido */
+    }
+
+    .header {
+      height: 200px;
+      background-color: chocolate;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('./assests/HEADER@2x.png');
+    }
+
+    #wit {
+      position: absolute;
+      top: 1600px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #btn_volver {
+      position: absolute;
+      top: 55px;
+      left: 933px;
+      width: 104px;
+      height: 104px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="assests/back_button@2x.png" id="btn_volver" alt="">
+  </div>
+
+  <div class="cuerpo">
+    <!-- Video -->
+    <video class="video-container" autoplay loop muted playsinline>
+      <source src="assests/GASTRONO.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+
+  <img src="./assests/wit.png" alt="" id="wit">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Acción de jQuery para volver a la página anterior
+    $('#btn_volver').click(function () {
+      window.history.back(); // Volver a la página anterior
+    });
+  </script>
+
+</body>
+
+</html>

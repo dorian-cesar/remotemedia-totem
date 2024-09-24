@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="357" height="231" viewBox="0 0 357 231">
+  <defs>
+    <filter id="Rectangle_494" x="0" y="0" width="357" height="231" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-color="#4a4747" flood-opacity="0.553"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_494-2" x="0" y="0" width="357" height="231" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#fff" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="RETAIL" transform="translate(-143.5 -820.5)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 143.5, 820.5)" filter="url(#Rectangle_494)">
+        <rect id="Rectangle_494-3" data-name="Rectangle 494" width="336" height="210" rx="40" transform="translate(10.5 3.5)" fill="#053bb5"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 143.5, 820.5)" filter="url(#Rectangle_494-2)">
+        <rect id="Rectangle_494-4" data-name="Rectangle 494" width="336" height="210" rx="40" transform="translate(10.5 3.5)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="Account" transform="translate(269 967)" fill="#e4e4e4" font-size="30" font-family="Arial" font-weight="700"><tspan x="0" y="0">RETAIL</tspan></text>
+    <path id="Path_49" data-name="Path 49" d="M14.431,16.493a4.123,4.123,0,1,1-4.123,4.123A4.135,4.135,0,0,1,14.431,16.493Zm0-12.37a4.135,4.135,0,0,0-4.123,4.123h8.246A4.135,4.135,0,0,0,14.431,4.123ZM24.739,32.986H4.123A4.135,4.135,0,0,1,0,28.862V12.37A4.135,4.135,0,0,1,4.123,8.246H6.185a8.246,8.246,0,0,1,16.493,0h2.062a4.135,4.135,0,0,1,4.123,4.123V28.862A4.135,4.135,0,0,1,24.739,32.986Z" transform="translate(308 889)" fill="#e4e4e4"/>
+  </g>
+</svg>

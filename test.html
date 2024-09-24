@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi página con Video.js</title>
+  <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet">
+  <script src="https://vjs.zencdn.net/7.19.2/video.js"></script>
+</head>
+<body>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="360" data-setup='{"techOrder": ["html5"], "autoplay": true}'>
+    <source src="GASTRONO.mp4" type="video/mp4">
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      supports HTML5 video.
+    </p>
+  </video>
+
+  <script>
+    var player = videojs('my-video');
+  </script>
+</body>
+</html>

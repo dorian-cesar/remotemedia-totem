@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totem-RemoteMedia</title>
+    <style>
+        .cuerpo {
+            height: 1720px;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            text-align: center;
+            background: transparent linear-gradient(180deg, #F5F5F5 0%, #D8D8D8 100%) 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+        .header {
+            height: 200px;
+            background-color: chocolate;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('./assests/HEADER@2x.png');
+        }
+
+      
+     
+
+        #wit {
+            position: absolute;
+            top: 1600px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+       
+
+        
+
+        #btn_volver {
+            position: absolute;
+            top: 55px;
+            left: 933px;
+            width: 104px;
+            height: 104px;
+            /* UI Properties */
+            background: transparent url('img/back_button.png') 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="assests/back_button@2x.png" id="btn_volver" alt="">
+    </div>
+    <div class="cuerpo">
+       
+
+        <img src="./assests/wit.png" alt="" id="wit">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Acción de jQuery para volver a la página anterior
+        $('#btn_volver').click(function () {
+            window.history.back(); // Volver a la página anterior
+        });
+
+
+    </script>
+
+</body>
+
+</html>
