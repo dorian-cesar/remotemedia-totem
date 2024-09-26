@@ -59,7 +59,7 @@
             width: 793px;
             height: 72px;
             text-align: left;
-            font: normal normal bold 60px/74px Helvetica ;
+            font: normal normal bold 60px/74px Helvetica;
             letter-spacing: 0px;
             color: #073366;
             opacity: 1;
@@ -77,7 +77,7 @@
 
         .pie {
 
-            display:flex;
+            display: flex;
             justify-content: center;
             width: 100%;
             /* font: normal normal bold 60px/74px; */
@@ -86,12 +86,12 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #053BB5;
             position: absolute;
-            top:1372px;
-          
-            
+            top: 1372px;
+
+
         }
 
-        .pie b{
+        .pie b {
             width: 667px;
         }
     </style>
@@ -126,6 +126,24 @@
         // Acción de jQuery para volver a la página anterior
         $('#btn_volver').click(function () {
             window.history.back(); // Volver a la página anterior
+        });
+
+        // Función de temporizador para redirigir a 'index.html' después de 1 minuto de inactividad
+        var timeout;
+
+        function resetTimer() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                window.location.href = 'index.html'; // Redirige al index.html después de 1 minuto
+            }, 60000); // 1 minuto (60000 milisegundos)
+        }
+
+        // Inicializa el temporizador
+        resetTimer();
+
+        // Reinicia el temporizador con cada interacción del usuario
+        $(document).on('mousemove keydown click', function () {
+            resetTimer();
         });
 
 

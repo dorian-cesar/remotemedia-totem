@@ -83,7 +83,7 @@
             width: 667px;
             height: 146px;
             text-align: center;
-            font: normal normal bold 60px/74px Helvetica ;
+            font: normal normal bold 60px/74px Helvetica;
             letter-spacing: 0px;
             color: #053BB5;
             text-transform: capitalize;
@@ -123,7 +123,23 @@
         $('#btn_volver').click(function () {
             window.history.back(); // Volver a la página anterior
         });
+        // Función de temporizador para redirigir a 'index.html' después de 1 minuto de inactividad
+        var timeout;
 
+        function resetTimer() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                window.location.href = 'index.html'; // Redirige al index.html después de 1 minuto
+            }, 60000); // 1 minuto (60000 milisegundos)
+        }
+
+        // Inicializa el temporizador
+        resetTimer();
+
+        // Reinicia el temporizador con cada interacción del usuario
+        $(document).on('mousemove keydown click', function () {
+            resetTimer();
+        });
 
     </script>
 

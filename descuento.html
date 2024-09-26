@@ -89,6 +89,7 @@
             font: normal normal bold 36px/40px Helvetica;
             opacity: 1
         }
+
         .saludo p {
             font-size: 32px;
         }
@@ -114,7 +115,7 @@
         <img src="./assests/wit.png" alt="" id="wit">
 
         <div class="saludo">
-            <b>Simplemente escanea el código QR. 
+            <b>Simplemente escanea el código QR.
                 <p>Te llevará a un formulario que solo necesitas completar.Una vez lo
                     hayas llenado, haz clic en el botón enviar</p>
             </b>
@@ -127,6 +128,23 @@
         // Acción de jQuery para volver a la página anterior
         $('#btn_volver').click(function () {
             window.history.back(); // Volver a la página anterior
+        });
+        // Función de temporizador para redirigir a 'index.html' después de 1 minuto de inactividad
+        var timeout;
+
+        function resetTimer() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                window.location.href = 'index.html'; // Redirige al index.html después de 1 minuto
+            }, 60000); // 1 minuto (60000 milisegundos)
+        }
+
+        // Inicializa el temporizador
+        resetTimer();
+
+        // Reinicia el temporizador con cada interacción del usuario
+        $(document).on('mousemove keydown click', function () {
+            resetTimer();
         });
 
 
