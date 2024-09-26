@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mi página con Video.js</title>
-  <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet">
-  <script src="https://vjs.zencdn.net/7.19.2/video.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Temporizada</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
 </head>
 <body>
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="360" data-setup='{"techOrder": ["html5"], "autoplay": true}'>
-    <source src="GASTRONO.mp4" type="video/mp4">
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      supports HTML5 video.
-    </p>
-  </video>
 
-  <script>
-    var player = videojs('my-video');
-  </script>
+    <h1>Esta página se redirigirá en 1 minuto a menos que interactúes</h1>
+    <p>Mueve el mouse o presiona cualquier tecla para evitar la redirección.</p>
+
+    <script>
+        var timeout;
+
+        function resetTimer() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                window.location.href = 'index.html'; // Redirige al index.html
+            }, 60000); // 1 minuto en milisegundos
+        }
+
+        // Inicializa el temporizador
+        resetTimer();
+
+        // Eventos que reinician el temporizador
+        $(document).on('mousemove keydown click', function() {
+            resetTimer();
+        });
+    </script>
+
 </body>
 </html>

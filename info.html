@@ -8,7 +8,6 @@
     <style>
         .cuerpo {
             height: 1720px;
-
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -20,15 +19,11 @@
 
         .header {
             height: 200px;
-          
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             background-image: url('./assests/HEADER@2x.png');
         }
-
-
-
 
         #wit {
             position: absolute;
@@ -48,7 +43,6 @@
             letter-spacing: 0px;
             color: #073366;
             opacity: 1;
-
         }
 
         .btn-container {
@@ -61,16 +55,12 @@
             gap: 58px;
         }
 
-
-
-
         #btn_volver {
             position: absolute;
             top: 55px;
             left: 933px;
             width: 104px;
             height: 104px;
-            /* UI Properties */
             background: transparent url('img/back_button.png') 0% 0% no-repeat padding-box;
             opacity: 1;
         }
@@ -79,10 +69,6 @@
             position: absolute;
             top: 1211px;
             left: 127px;
-           
-          
-            /* UI Properties */
-            
             opacity: 1;
         }
 
@@ -90,11 +76,8 @@
             position: absolute;
             top: 1443px;
             left: 127px;
-           
             height: 143px;
         }
-
-        ;
     </style>
 </head>
 
@@ -104,7 +87,6 @@
         <img src="assests/back_button@2x.png" id="btn_volver" alt="">
     </div>
     <div class="cuerpo">
-
         <div class="saludo">
             <b>CARTELERÍA DIGITAL</b>
         </div>
@@ -114,12 +96,9 @@
             <img src="assests/ERGO.png" alt="" id="ergo">
         </div>
 
-        <img src="assests/descuento.svg" alt="" id="descuento" width="826px" >
-
+        <img src="assests/descuento.svg" alt="" id="descuento" width="826px">
         <img src="assests/contacto.png" alt="" id="btn_contactanos" width="826px">
-
         <img src="./assests/wit.png" alt="" id="wit">
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -145,10 +124,23 @@
             window.location.href = "contacto.html"; // Reemplaza con la URL deseada
         });
 
+        // Función de temporizador para redirigir a 'index.html' después de 1 minuto de inactividad
+        var timeout;
 
+        function resetTimer() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                window.location.href = 'index.html'; // Redirige al index.html después de 1 minuto
+            }, 60000); // 1 minuto (60000 milisegundos)
+        }
 
+        // Inicializa el temporizador
+        resetTimer();
 
-
+        // Reinicia el temporizador con cada interacción del usuario
+        $(document).on('mousemove keydown click', function () {
+            resetTimer();
+        });
     </script>
 
 </body>
