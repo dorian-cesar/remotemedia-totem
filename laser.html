@@ -105,7 +105,7 @@
     <div class="cuerpo">
 
         <div class="saludo">
-            <b>CATALOGO IMPRESORAS</b>
+            <b>CATÁLOGO IMPRESORAS</b>
         </div>
 
         <div class="qr-container">
@@ -126,6 +126,9 @@
         // Acción de jQuery para volver a la página anterior
         $('#btn_volver').click(function () {
             window.history.back(); // Volver a la página anterior
+        });
+        $('.header').click(function () {
+            window.location.href='index.html'; // Volver a la página anterior
         });
 
         // Función de temporizador para redirigir a 'index.html' después de 1 minuto de inactividad
