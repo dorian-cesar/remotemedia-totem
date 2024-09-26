@@ -2,8 +2,14 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-C047D1JQYT"></script> 
-     <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-C047D1JQYT'); </script>
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C047D1JQYT"></script> 
+    <script> 
+        window.dataLayer = window.dataLayer || []; 
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date()); 
+        gtag('config', 'G-C047D1JQYT'); 
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Totem-RemoteMedia</title>
@@ -65,7 +71,7 @@
 
         #wit {
             position: absolute;
-            top: 1350px;
+            top: 1806px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -121,9 +127,7 @@
 
         // Reproducción del video al hacer clic en el div "cuerpo"
         $('#cuerpo').click(function () {
-            var video = document.getElementById('video');
-            video.style.display = 'block'; // Mostrar el video
-            video.play(); // Iniciar reproducción del video
+            playVideo();
         });
 
         // Opcional: Pausar el video si se hace clic en él
@@ -135,8 +139,26 @@
                 video.pause(); // Pausar el video si está reproduciendo
             }
         });
+
+        // Función para reproducir el video
+        function playVideo() {
+            var video = document.getElementById('video');
+            video.style.display = 'block'; // Mostrar el video
+            video.play(); // Iniciar reproducción del video
+
+            // Ocultar el video cuando termine
+            video.onended = function () {
+                video.style.display = 'none';
+            };
+        }
+
+        // Reproducir el video automáticamente cada 4 minutos (240,000 ms)
+        setInterval(function () {
+            playVideo();
+        }, 240000); // 240000 milisegundos = 4 minutos
     </script>
 
 </body>
 
 </html>
+
