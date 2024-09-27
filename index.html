@@ -124,18 +124,22 @@
     <script>
         // Navegación entre páginas
         $("#btn_remote").click(function () {
+            event.stopPropagation();
             window.location.href = "remote.html"; // Reemplaza con la URL deseada
         });
 
         $("#btn_contactanos").click(function () {
+            event.stopPropagation();
             window.location.href = "contacto.html"; // Reemplaza con la URL deseada
         });
 
         $("#btn_llamar").click(function () {
+            event.stopPropagation();
             window.location.href = "wsp.html"; // Reemplaza con la URL deseada
         });
 
         $("#btn_descubre").click(function () {
+            event.stopPropagation();
             window.location.href = "info.html"; // Reemplaza con la URL deseada
         });
 
