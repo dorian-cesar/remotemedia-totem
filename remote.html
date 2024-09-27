@@ -74,11 +74,14 @@
             border: 1px solid #707070;
         }
 
+   
+
         #wit {
             position: absolute;
+            height: 48px;
             top: 1600px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 487px;
+            z-index: 20;
         }
 
         #descuento {
@@ -118,6 +121,7 @@
             /* UI Properties */
             /* background: transparent url('./assests/back_button.png') 0% 0% no-repeat padding-box; */
             opacity: 1;
+            z-index: 30;
         }
 
         ;
@@ -155,7 +159,7 @@
         <!-- Botón Contactanos centrado a 1500px del margen superior -->
         <button id="btn_contactanos"><b>Contáctanos</b></button>
 
-        <img src="./assests/wit.png" alt="" id="wit">
+        <img src="./assests/logo negro final .svg" alt="" id="wit">
 
     </div>
 
@@ -163,9 +167,10 @@
     <script>
         // Acción de jQuery para volver a la página anterior
         $('#btn_volver').click(function () {
+            event.stopPropagation();
+            clearTimeout(timeout);
             window.history.back(); // Volver a la página anterior
         });
-
         $('.header').click(function () {
             window.location.href='index.html'; // Volver a la página anterior
         });
